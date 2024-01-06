@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomePage> {
                   Divider(thickness: 1.5, color: Colors.lime.shade900, ),
                   Padding(
                     padding: const EdgeInsets.only(top: 12, left: 8, right: 8),
-                    child: Text('Attempts : ${attemptCounter} / ${attemptCounter}',style: const TextStyle(
+                    child: Text('Attempts : ${correctAnswer} / ${attemptCounter}',style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 18,
                         color: Colors.white
@@ -97,11 +97,10 @@ class _HomeScreenState extends State<HomePage> {
             CircularCountDownTimer(
                 width: MediaQuery.of(context).size.width / 4,
                 height: MediaQuery.of(context).size.height / 4,
-                duration: 5,
+                duration: 15,
                 fillColor: Colors.green,
                 ringColor: Colors.grey,
                 isReverse: true,
-                textFormat: '0:00',
             ),
             ElevatedButton(
                 onPressed: (){
